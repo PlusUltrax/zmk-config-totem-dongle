@@ -20,26 +20,26 @@ It was created for the SEEED XIAO keyboard contest.\
 
 ## PCB
 
-[Here](/PCB/) you can find the KiCad files and Gerbers for the TOTEM.
+[Here](https://github.com/GEIGEIGEIST/TOTEM/tree/main/PCB) you can find the KiCad files and Gerbers for the TOTEM.
 
 ***
 
 ## CASE
 
-You can use the TOTEM without a case, but [here](/case/) you can find one I made for it.
+You can use the TOTEM without a case, but [here](https://github.com/GEIGEIGEIST/TOTEM/tree/main/case) you can find one I made for it.
 
 ***
 
 ## BUILD GUIDE
 
-The build guide for the TOTEM can be found [here](/docs/buildguide.md).
+The build guide for the TOTEM can be found [here](https://github.com/GEIGEIGEIST/TOTEM/blob/main/docs/buildguide.md).
 
 ***
 
 ## FIRMWARE
 
-[QMK (VIAL) precompiled](/firmware/QMK/) or [QMK (VIAL) source](/firmware/QMK/VIAL_source/) for the TOTEM (wired using the XIAO RP2040)\
-[ZMK precompiled](/firmware/ZMK/) or [ZMK source (outdated)](https://github.com/GEIGEIGEIST/zmk-config-totem) for the TOTEM (wireless using the XIAO BLE)
+[QMK (VIAL) precompiled](https://github.com/GEIGEIGEIST/TOTEM/tree/main/firmware/QMK) or [QMK (VIAL) source]([/firmware/QMK/VIAL_source/](https://github.com/GEIGEIGEIST/TOTEM/tree/main/firmware/QMK/VIAL_source) for the TOTEM (wired using the XIAO RP2040)\
+[ZMK precompiled](https://github.com/GEIGEIGEIST/TOTEM/tree/main/firmware/ZMK) or [ZMK source (outdated)](https://github.com/GEIGEIGEIST/zmk-config-totem) for the TOTEM (wireless using the XIAO BLE)
 
 ***
 
