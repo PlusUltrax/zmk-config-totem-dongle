@@ -199,8 +199,8 @@
 
         gaming_layer {
             bindings = <
-           &kp T  &kp Q  &kp W    &kp E      &kp R      &kp H           &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mkp MB4
-           &kp G  &kp A  &kp S    &kp D      &kp F      &mkp MB3        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5
+           &kp T  &kp Q  &kp W    &kp E      &kp R      &mkp MB3        &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mkp MB4
+           &kp G  &kp A  &kp S    &kp D      &kp F      &kp H           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5
 &kp LSHFT  &kp B  &kp Z  &kp X    &kp C      &kp V      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT  &none     &none
                          &kp ESC  &kp SPACE  &kp TAB    &trans          &trans          &trans
             >;
