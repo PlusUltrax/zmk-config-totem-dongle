@@ -34,31 +34,58 @@
     combos {
         compatible = "zmk,combos";
 
-        Gaming {
-            bindings = <&to 5>;
-            key-positions = <16 17 18 19>;
-        };
-
         base {
             bindings = <&to 0>;
-            key-positions = <10 11 12 13>;
+            key-positions = <11 12 13>;
+        };
+
+        Gaming {
+            bindings = <&to 5>;
+            key-positions = <16 17 18>;
         };
     };
 
-    macros {
-        gif: gif {
-            label = "giphy";
-            compatible = "zmk,behavior-macro";
+    behaviors {
+        spce1_tap_dnce: spce1_tap_dnce {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SPCE1_TAP_DNCE";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp N2>,
-                <&macro_release>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp G &kp I &kp F>;
+            bindings = <&lt 1 SPACE>, <&kp SPACE>;
+        };
+
+        bksp2_tap_dnce: bksp2_tap_dnce {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BKSP2_TAP_DNCE";
+            #binding-cells = <0>;
+            bindings = <&lt 2 BACKSPACE>, <&kp BACKSPACE>;
+        };
+
+        del3_tap_dnce: del3_tap_dnce {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DEL3_TAP_DNCE";
+            #binding-cells = <0>;
+            bindings = <&lt 3 DELETE>, <&kp DELETE>;
+        };
+
+        spce4_tap_dnce: spce4_tap_dnce {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SPCE4_TAP_DNCE";
+            #binding-cells = <0>;
+            bindings = <&lt 4 SPACE>, <&kp SPACE>;
+        };
+
+        crtl_tap5: crtl_tap5 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CRTL_TAP5";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_CONTROL>, <&mo 5>;
+        };
+
+        shft_enter: shft_enter {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHFT_ENTER";
+            #binding-cells = <0>;
+            bindings = <&mt LEFT_SHIFT ENTER>, <&kp ENTER>;
         };
     };
 
@@ -84,19 +111,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp Q  &kp W  &kp E            &kp R        &kp T                   &kp Y         &kp U        &kp I              &kp O    &kp P
-        &kp A  &kp S  &kp D            &kp F        &kp G                   &kp H         &kp J        &kp K              &kp L    &kp SEMICOLON
-&gresc  &kp Z  &kp X  &kp C            &kp V        &kp B                   &kp N         &kp M        &kp COMMA          &kp DOT  &kp FSLH       &kp APOSTROPHE
-                      &lt 4 BACKSPACE  &lt 2 SPACE  &mt LEFT_SHIFT ENTER    &lt 3 DELETE  &lt 1 SPACE  &kp RIGHT_CONTROL
+         &kp Q  &kp W  &kp E            &kp R            &kp T          &kp Y           &kp U            &kp I       &kp O    &kp P
+         &kp A  &kp S  &kp D            &kp F            &kp G          &kp H           &kp J            &kp K       &kp L    &kp SEMICOLON
+&kp TAB  &kp Z  &kp X  &kp C            &kp V            &kp B          &kp N           &kp M            &kp COMMA   &kp DOT  &kp FSLH       &kp APOSTROPHE
+                       &spce4_tap_dnce  &bksp2_tap_dnce  &shft_enter    &del3_tap_dnce  &spce1_tap_dnce  &crtl_tap5
             >;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        nav_layer {
+        num_nav_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "NAVI";
+            label = "NUMNAV";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -110,10 +137,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6    &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-        &trans        &trans        &trans        &kp LEFT_GUI  &trans          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT     &trans
-&trans  &kp LC(Z)     &kp RC(X)     &kp RC(C)     &kp RC(V)     &trans          &trans          &trans          &trans        &trans        &trans        &trans
-                                    &trans        &trans        &trans          &trans          &trans          &trans
+        &kp NUMBER_1  &kp NUMBER_2      &kp NUMBER_3    &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6    &kp NUMBER_7    &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+        &trans        &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_GUI  &trans          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT     &kp PAGE_UP
+&trans  &kp LC(Z)     &kp RC(X)         &kp RC(C)       &kp RC(V)     &trans          &kp INSERT      &kp END         &kp HOME      &trans        &kp PAGE_DOWN  &kp PRINTSCREEN
+                                        &trans          &trans        &trans          &trans          &trans          &trans
             >;
         };
 
@@ -136,10 +163,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-      &kp EXCL  &kp AT  &kp POUND  &kp DLLR  &kp PRCNT    &kp CARET       &kp AMPS     &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-      &trans    &trans  &trans     &kp F     &trans       &kp MINUS       &kp EQUAL    &kp K         &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&gif  &kp Z     &kp X   &kp C      &kp V     &trans       &kp UNDERSCORE  &kp KP_PLUS  &trans        &kp HASH              &kp BSLH               &kp PRINTSCREEN
-                        &trans     &trans    &trans       &trans          &trans       &trans
+            &kp EXCL  &kp DOUBLE_QUOTES  &kp POUND  &kp DLLR  &kp PRCNT    &kp CARET       &kp AMPS     &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+            &trans    &trans             &trans     &trans    &trans       &kp MINUS       &kp EQUAL    &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp HASH
+&kp ESCAPE  &trans    &trans             &trans     &trans    &trans       &kp UNDERSCORE  &kp KP_PLUS  &kp LEFT_BRACE    &kp RIGHT_BRACE       &kp NON_US_BACKSLASH   &trans
+                                         &trans     &trans    &trans       &trans          &trans       &trans
             >;
         };
 
