@@ -30,6 +30,11 @@
     tapping-term-ms = <170>;
 };
 
+&lt {
+    tapping-term-ms = <170>;
+    quick-tap-ms = <100>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -79,6 +84,8 @@
             label = "CRTL_TAP5";
             #binding-cells = <0>;
             bindings = <&kp RIGHT_CONTROL>, <&mo 5>;
+
+            tapping-term-ms = <170>;
         };
 
         shft_enter: shft_enter {
@@ -86,6 +93,8 @@
             label = "SHFT_ENTER";
             #binding-cells = <0>;
             bindings = <&mt LEFT_SHIFT ENTER>, <&kp ENTER>;
+
+            tapping-term-ms = <170>;
         };
     };
 
